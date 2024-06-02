@@ -1,5 +1,6 @@
 import '@/app/ui/global.css'
 import { inter } from '@/app/ui/fonts'
+import clsx from 'clsx';
 
 export default function RootLayout({
   children,
@@ -9,7 +10,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased`}
+        className={clsx(
+          `${inter.className} antialiased`,
+          // 'bg-gray-400'
+        )}
       >{children}</body>
     </html>
   );
